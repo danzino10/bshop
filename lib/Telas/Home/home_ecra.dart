@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
   final ServicoAuth _auth = ServicoAuth();
   final paginas = [
     ProdutosCorpo(),
-    ProdutosCorpo(),
+    HomeCorpo(),
     Text("Conta"),
     Text("Carrinho"),
     Text("Mensagens"),
