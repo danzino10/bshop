@@ -388,60 +388,60 @@ class _HomeCorpoState extends State<HomeCorpo> {
                 ],
               ),
             ),
-            SingleChildScrollView(
-              child: Column(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 10),
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 20,
-                          vertical: 5
-                      ),
-                      width: tamanho.width *0.95,
-                      height: tamanho.height * 0.25,
-                      child: GridView.count(
-                        crossAxisCount: 3,
-                        children: <Widget>[
-                          cartao(Icon(Icons.watch_later),"Relogio"),
-                          cartao(Icon(Icons.history),'Histórico'),
-                          cartao(Icon(Icons.account_balance),'Conta'),
-                          cartao(Icon(Icons.account_balance_wallet),'Carteira'),
-                          cartao(Icon(Icons.playlist_add_check),'Estatística'),
-                          cartao(Icon(Icons.assignment),'Relatório'),
-                          cartao(Icon(Icons.library_music),'Música'),
-                          cartao(Icon(Icons.settings),'Definições'),
+            Column(
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 10),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 5
+                    ),
+                    width: tamanho.width *0.95,
+                    height: tamanho.height * 0.25,
+                    child: GridView.count(
+                      crossAxisCount: 3,
+                      children: <Widget>[
+                        cartao(Icon(Icons.watch_later),"Relogio"),
+                        cartao(Icon(Icons.history),'Histórico'),
+                        cartao(Icon(Icons.account_balance),'Conta'),
+                        cartao(Icon(Icons.account_balance_wallet),'Carteira'),
+                        cartao(Icon(Icons.playlist_add_check),'Estatística'),
+                        cartao(Icon(Icons.assignment),'Relatório'),
+                        cartao(Icon(Icons.library_music),'Música'),
+                        cartao(Icon(Icons.settings),'Definições'),
 
-                        ],
-                      ),
+                      ],
                     ),
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 10),
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 20,
-                          vertical: 5
-                      ),
-                      width: tamanho.width *0.95,
-                      height: tamanho.height * 0.35,
-                      decoration: BoxDecoration(
-                        color: corSecundaria,
-                        borderRadius: BorderRadius.circular(29),
-                      ),
-                      child: PageView.builder(
-                          controller: pageController,
-                          itemCount: img.length,
-                          itemBuilder: (context,position){
-                            return imageSlider(position);
-                          }),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 10),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 5
                     ),
-                    SizedBox(height: tamanho.height * 0.02,),
-                    Expanded(
-                        child: new ListView.builder(
-                          itemCount: produtos.length,
-                          itemBuilder: (BuildContext context,int index) => CartaoProdutos(context, index)
-                        ),
+                    width: tamanho.width *0.95,
+                    height: tamanho.height * 0.35,
+                    decoration: BoxDecoration(
+                      color: corSecundaria,
+                      borderRadius: BorderRadius.circular(29),
+                    ),
+                    child: PageView.builder(
+                        controller: pageController,
+                        itemCount: img.length,
+                        itemBuilder: (context,position){
+                          return imageSlider(position);
+                        }),
+                  ),
+                  SizedBox(height: tamanho.height * 0.02,),
+                  Column(
+                    children: [
+                      new ListView.builder(
+                        itemCount: produtos.length,
+                        itemBuilder: (BuildContext context,int index) => CartaoProdutos(context, index)
                       ),
-                  ],
-              ),
+                    ],
+                  ),
+                ],
             ),
           ],
         ),
