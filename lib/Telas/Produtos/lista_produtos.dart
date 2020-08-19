@@ -12,12 +12,12 @@ class ProdutosCorpo extends StatefulWidget{
 class _ProdutosCorpoState extends State<ProdutosCorpo>{
 
   List<Produto> produtos = [
-    Produto('assets/imagens/produtos/produto-alcool-gel-caseiro.jpg', "Químicos Lda", "2.150,00 Kz", "Álcool gel", "Saúde e Beleza"),
-    Produto('assets/imagens/produtos/produto-alcool-gel-industrial.jpg',"Mecofarma","2.730,00 Kz","Álcool gel","Saúde e Beleza"),
-    Produto('assets/imagens/produtos/produto-iphone.jpg',"Danilo Carvalho","470.000,00 Kz","Iphone X","Informática e Tecnologia"),
-    Produto('assets/imagens/produtos/produto-hp.jpg',"NCR Angola","1.270.350,00 Kz","HP EliteBook 840","Informática e Tecnologia"),
-    Produto('assets/imagens/produtos/produto-mascaras.jpg',"Alfaiates Lda","450,00 Kz","Álcool gel","Acessórios de Roupa"),
-    Produto('assets/imagens/produtos/produto-alcool-gel-caseiro.jpg', "Químicos Lda", "2.150,00 Kz", "Álcool gel", "Saúde e Beleza"),
+//    Produto('assets/imagens/produtos/produto-alcool-gel-caseiro.jpg', "Químicos Lda", "2.150,00 Kz", "Álcool gel", "Saúde e Beleza"),
+//    Produto('assets/imagens/produtos/produto-alcool-gel-industrial.jpg',"Mecofarma","2.730,00 Kz","Álcool gel","Saúde e Beleza"),
+//    Produto('assets/imagens/produtos/produto-iphone.jpg',"Danilo Carvalho","470.000,00 Kz","Iphone X","Informática e Tecnologia"),
+//    Produto('assets/imagens/produtos/produto-hp.jpg',"NCR Angola","1.270.350,00 Kz","HP EliteBook 840","Informática e Tecnologia"),
+//    Produto('assets/imagens/produtos/produto-mascaras.jpg',"Alfaiates Lda","450,00 Kz","Álcool gel","Acessórios de Roupa"),
+//    Produto('assets/imagens/produtos/produto-alcool-gel-caseiro.jpg', "Químicos Lda", "2.150,00 Kz", "Álcool gel", "Saúde e Beleza"),
   ];
 
 
