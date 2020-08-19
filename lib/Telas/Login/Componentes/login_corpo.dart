@@ -1,9 +1,9 @@
-import 'package:bshop/Componentes/botao_curvo.dart';
-import 'package:bshop/Componentes/botao_rede_social.dart';
+import 'package:bshop/Componentes/Botoes/botao_rede_social.dart';
+import 'package:bshop/Componentes/Campo_de_Texto/text_field_password_redondo.dart';
+import 'file:///W:/AndroidStudio/ECommerce/bshop/lib/Componentes/Botoes/botao_curvo.dart';
 import 'package:bshop/Componentes/divisor_ou.dart';
 import 'package:bshop/Componentes/ja_tem_conta.dart';
-import 'package:bshop/Componentes/text_field_password_redondo.dart';
-import 'package:bshop/Componentes/text_field_redondo_email.dart';
+import 'file:///W:/AndroidStudio/ECommerce/bshop/lib/Componentes/Campo_de_Texto/text_field_redondo_email.dart';
 import 'package:bshop/Servicos/auth.dart';
 import 'package:bshop/Telas/Home/home_ecra.dart';
 import 'package:bshop/Telas/Login/Componentes/login_background.dart';

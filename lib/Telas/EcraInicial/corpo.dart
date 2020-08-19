@@ -1,5 +1,5 @@
 
-import 'package:bshop/Componentes/botao_curvo.dart';
+import 'file:///W:/AndroidStudio/ECommerce/bshop/lib/Componentes/Botoes/botao_curvo.dart';
 import 'package:bshop/Servicos/auth.dart';
 import 'package:bshop/Telas/EcraInicial/background.dart';
 import 'package:bshop/Telas/Home/home_ecra.dart';

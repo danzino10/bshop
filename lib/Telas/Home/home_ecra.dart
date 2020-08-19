@@ -1,7 +1,7 @@
-import 'package:bshop/Componentes/barra_de_busca_home.dart';
+import 'file:///W:/AndroidStudio/ECommerce/bshop/lib/Componentes/Barra_de_busca/barra_de_busca_home.dart';
 import 'package:bshop/Servicos/auth.dart';
 import 'package:bshop/Telas/Home/Componentes/home_corpo.dart';
-import 'package:bshop/Telas/Produtos/lista_produtos.dart';
+import 'file:///W:/AndroidStudio/ECommerce/bshop/lib/Componentes/Produto/lista_produtos.dart';
 import 'package:bshop/constantes.dart';
 import 'package:flutter/material.dart';
 
@@ -15,8 +15,8 @@ class _HomeState extends State<Home> {
 
   final ServicoAuth _auth = ServicoAuth();
   final paginas = [
-    ProdutosCorpo(),
     HomeCorpo(),
+    Text("Conta"),
     Text("Conta"),
     Text("Carrinho"),
     Text("Mensagens"),

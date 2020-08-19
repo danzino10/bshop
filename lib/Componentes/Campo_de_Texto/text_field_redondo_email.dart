@@ -1,4 +1,4 @@
-import 'package:bshop/Componentes/text_field_container.dart';
+import 'file:///W:/AndroidStudio/ECommerce/bshop/lib/Componentes/Campo_de_Texto/text_field_container.dart';
 import 'package:bshop/constantes.dart';
 import 'package:flutter/material.dart';
 

@@ -1,5 +1,5 @@
-import 'package:bshop/Componentes/barra_de_busca_container.dart';
-import 'package:bshop/Componentes/text_field_container.dart';
+import 'file:///W:/AndroidStudio/ECommerce/bshop/lib/Componentes/Barra_de_busca/barra_de_busca_container.dart';
+import 'file:///W:/AndroidStudio/ECommerce/bshop/lib/Componentes/Campo_de_Texto/text_field_container.dart';
 import 'package:flutter/material.dart';
 
 class BarraDeBuscaHome extends StatelessWidget {

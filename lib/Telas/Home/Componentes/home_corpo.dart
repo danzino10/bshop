@@ -1,6 +1,7 @@
 
-import 'package:bshop/Componentes/botao_rede_social.dart';
-import 'package:bshop/Componentes/produto.dart';
+import 'package:bshop/Componentes/Botoes/botao_rede_social.dart';
+import 'package:bshop/Componentes/Produto/lista_produtos.dart';
+import 'file:///W:/AndroidStudio/ECommerce/bshop/lib/Componentes/Produto/produto.dart';
 import 'package:bshop/Servicos/auth.dart';
 import 'package:bshop/Telas/Home/Componentes/home_background.dart';
 import 'package:bshop/constantes.dart';
@@ -435,10 +436,7 @@ class _HomeCorpoState extends State<HomeCorpo> {
                   SizedBox(height: tamanho.height * 0.02,),
                   Column(
                     children: [
-                      new ListView.builder(
-                        itemCount: produtos.length,
-                        itemBuilder: (BuildContext context,int index) => CartaoProdutos(context, index)
-                      ),
+                      ProdutosLista(),
                     ],
                   ),
                 ],
