@@ -44,405 +44,394 @@ class _HomeCorpoState extends State<HomeCorpo> {
     
     
     return HomeBackground(
-      child: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            SizedBox(height: tamanho.height * 0.02,),
-            Text(
-              "Categorias:",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: corPrimaria,
-                fontSize: 15,
-              ),
+      child: Column(
+        children: <Widget>[
+          Text(
+            "Categorias:",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: corPrimaria,
+              fontSize: 15,
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/estrela.svg",
-                        press: (){},
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/estrela.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Favoritos",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
                       ),
-                      Text(
-                        "Favoritos",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/vestido_mulher.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Moda Feminina",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
                       ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/vestido_mulher.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Moda Feminina",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
+                ),
 
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/camisa_homem.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Moda Masculina",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/comida.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Mercado Alimentar",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/desporto.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Desporto e Lazer",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/eventos.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Casamentos e Eventos",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/relogio.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Jóias e Relógios",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/computador.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Informática e Tecnologia",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/electrodomesticos.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Electrodomésticos",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/jardim.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Casa e Jardins",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/brinquedo.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Brinquedos e Passatempos",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/cosmeticos.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Saúde e Beleza",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/carrinho.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Mamã e Bebê",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/escola.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Escolar e Escritório",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/martelo.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Material de Construção",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/eletricista.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Eletrónica e Energia",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/carro.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Automóveis e Peças",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/animal.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Animais e Petshop",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      BotaoRedeSocial(
-                        iconeSrc: "assets/icones/trabalhador.svg",
-                        press: (){},
-                      ),
-                      Text(
-                        "Prestação de Serviços",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: corPrimaria,
-                          fontSize: 8,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            Column(
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: 10),
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 5
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/camisa_homem.svg",
+                      press: (){},
                     ),
-                    width: tamanho.width *0.95,
-                    height: tamanho.height * 0.25,
-                    child: GridView.count(
-                      crossAxisCount: 3,
-                      children: <Widget>[
-                        cartao(Icon(Icons.watch_later),"Relogio"),
-                        cartao(Icon(Icons.history),'Histórico'),
-                        cartao(Icon(Icons.account_balance),'Conta'),
-                        cartao(Icon(Icons.account_balance_wallet),'Carteira'),
-                        cartao(Icon(Icons.playlist_add_check),'Estatística'),
-                        cartao(Icon(Icons.assignment),'Relatório'),
-                        cartao(Icon(Icons.library_music),'Música'),
-                        cartao(Icon(Icons.settings),'Definições'),
+                    Text(
+                      "Moda Masculina",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/comida.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Mercado Alimentar",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/desporto.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Desporto e Lazer",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/eventos.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Casamentos e Eventos",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/relogio.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Jóias e Relógios",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/computador.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Informática e Tecnologia",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/electrodomesticos.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Electrodomésticos",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/jardim.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Casa e Jardins",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/brinquedo.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Brinquedos e Passatempos",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/cosmeticos.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Saúde e Beleza",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/carrinho.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Mamã e Bebê",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/escola.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Escolar e Escritório",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/martelo.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Material de Construção",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/eletricista.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Eletrónica e Energia",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/carro.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Automóveis e Peças",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/animal.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Animais e Petshop",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    BotaoRedeSocial(
+                      iconeSrc: "assets/icones/trabalhador.svg",
+                      press: (){},
+                    ),
+                    Text(
+                      "Prestação de Serviços",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: corPrimaria,
+                        fontSize: 8,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 10),
+            padding: EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 5
+            ),
+            width: tamanho.width *0.95,
+            height: tamanho.height * 0.25,
+            child: GridView.count(
+              crossAxisCount: 3,
+              children: <Widget>[
+                cartao(Icon(Icons.watch_later),"Relogio"),
+                cartao(Icon(Icons.history),'Histórico'),
+                cartao(Icon(Icons.account_balance),'Conta'),
+                cartao(Icon(Icons.account_balance_wallet),'Carteira'),
+                cartao(Icon(Icons.playlist_add_check),'Estatística'),
+                cartao(Icon(Icons.assignment),'Relatório'),
+                cartao(Icon(Icons.library_music),'Música'),
+                cartao(Icon(Icons.settings),'Definições'),
 
-                      ],
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: 10),
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 5
-                    ),
-                    width: tamanho.width *0.95,
-                    height: tamanho.height * 0.35,
-                    decoration: BoxDecoration(
-                      color: corSecundaria,
-                      borderRadius: BorderRadius.circular(29),
-                    ),
-                    child: PageView.builder(
-                        controller: pageController,
-                        itemCount: img.length,
-                        itemBuilder: (context,position){
-                          return imageSlider(position);
-                        }),
-                  ),
-                  SizedBox(height: tamanho.height * 0.02,),
-                  Column(
-                    children: [
-                      ProdutosLista(),
-                    ],
-                  ),
-                ],
+              ],
             ),
-          ],
-        ),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 10),
+            padding: EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 5
+            ),
+            width: tamanho.width *0.95,
+            height: tamanho.height * 0.35,
+            decoration: BoxDecoration(
+              color: corSecundaria,
+              borderRadius: BorderRadius.circular(29),
+            ),
+            child: PageView.builder(
+                controller: pageController,
+                itemCount: img.length,
+                itemBuilder: (context,position){
+                  return imageSlider(position);
+                }),
+          ),
+          SizedBox(height: tamanho.height * 0.02,),
+          Container(child: ProdutosLista()),
+        ],
       ),
     );
   }
@@ -492,22 +481,22 @@ class _HomeCorpoState extends State<HomeCorpo> {
     );
   }
 
-  Widget CartaoProdutos (BuildContext context, int index){
-    final produto = produtos[index];
-    return new Container(
-      child: Card(
-        child: Column(
-          children: [
-            Text(produto.titulo),
-            Text(produto.preco),
-            Text(produto.vendedor),
-            Text(produto.complemento),
-            Text(produto.imagemSrc),
-          ],
-        ),
-      ),
-    );
-  }
+//  Widget CartaoProdutos (BuildContext context, int index){
+//    final produto = produtos[index];
+//    return new Container(
+//      child: Card(
+//        child: Column(
+//          children: [
+//            Text(produto.titulo),
+//            Text(produto.preco),
+//            Text(produto.vendedor),
+//            Text(produto.complemento),
+//            Text(produto.imagemSrc),
+//          ],
+//        ),
+//      ),
+//    );
+//  }
 }
 
 

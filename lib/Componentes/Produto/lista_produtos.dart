@@ -13,7 +13,14 @@ class _ProdutosListaState extends State<ProdutosLista>{
     int index = 0;
     return produto.map((e) {
       var container = Container (
-
+        child: new Row(
+          children: [
+            new Container(
+              margin: EdgeInsets.all(8.0),
+              child: new Image.asset(e.imagemSrc, width: 70.0, height: 70.0,),
+            )
+          ],
+        ),
       );
       return container;
     }).toList();
@@ -21,7 +28,6 @@ class _ProdutosListaState extends State<ProdutosLista>{
 
   @override
   Widget build(BuildContext context) {
-    Size tamanho = MediaQuery.of(context).size;
     return new ListView(
       children: construirProdutos(),
     );
