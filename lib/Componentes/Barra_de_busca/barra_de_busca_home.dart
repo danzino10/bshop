@@ -2,6 +2,7 @@ import 'file:///W:/AndroidStudio/ECommerce/bshop/lib/Componentes/Barra_de_busca/
 import 'file:///W:/AndroidStudio/ECommerce/bshop/lib/Componentes/Campo_de_Texto/text_field_container.dart';
 import 'package:flutter/material.dart';
 
+// Classe para barra de busca da página inicial
 class BarraDeBuscaHome extends StatelessWidget {
   final String hint;
   final ValueChanged<String> onChanged;

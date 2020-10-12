@@ -1,4 +1,6 @@
 
+
+
 class Produto{
 
   String titulo, preco, complemento, vendedor, imagemSrc;

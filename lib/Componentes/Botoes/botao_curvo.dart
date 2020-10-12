@@ -1,6 +1,7 @@
 import 'package:bshop/constantes.dart';
 import 'package:flutter/material.dart';
 
+// Classe modelo para o botão primário da aplicação
 class BotaoCurvo extends StatelessWidget {
   final String texto;
   final Function press;

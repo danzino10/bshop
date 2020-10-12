@@ -1,5 +1,7 @@
 
-import 'file:///W:/AndroidStudio/ECommerce/bshop/lib/Componentes/Produto/produto.dart';
+import 'package:bshop/Componentes/Produto/produto.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
 
 var produto = [
   Produto(
@@ -73,3 +75,14 @@ var produto = [
     titulo: "HP EliteBook 840",
   ),
 ];
+
+
+// StreamBuilder BuscarProdutos(String titulo, preco, comp, vend, src) {
+//   return StreamBuilder(
+//     stream: Firestore.instance.collection('Produto').snapshots(),
+//     builder: (context, snapshot) {
+//       if (!snapshot.hasData) return Text('Carregando os dados... Porfavor aguarde');
+//       return ;
+//     },
+//   );
+// }

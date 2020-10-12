@@ -1,6 +1,7 @@
 import 'package:bshop/constantes.dart';
 import 'package:flutter/material.dart';
 
+//Classe modelo para
 class TextFieldContainer extends StatelessWidget {
   final Widget child;
   const TextFieldContainer({

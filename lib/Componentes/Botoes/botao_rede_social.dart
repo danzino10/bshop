@@ -2,6 +2,7 @@ import 'package:bshop/constantes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+//Classe modelo para o botão das redes sociais e das categorias da página principal
 class BotaoRedeSocial extends StatelessWidget {
   final String iconeSrc;
   final Function press;

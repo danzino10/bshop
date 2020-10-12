@@ -2,11 +2,11 @@
 import 'package:bshop/Componentes/Botoes/botao_curvo.dart';
 import 'package:bshop/Componentes/Botoes/botao_rede_social.dart';
 import 'package:bshop/Componentes/Produto/dados_produtos.dart';
-import 'package:bshop/Componentes/Produto/produto.dart';
 import 'package:bshop/Servicos/auth.dart';
 import 'package:bshop/Telas/Home/Componentes/home_background.dart';
 import 'package:bshop/Telas/wrapper.dart';
 import 'package:bshop/constantes.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -446,37 +446,42 @@ class _HomeCorpoState extends State<HomeCorpo> with SingleTickerProviderStateMix
                 ),
                 width: tamanho.width *0.95,
                 height: tamanho.height * 0.65,
-                child: GridView.count(
-                  crossAxisCount: 2,
-                  children: List.generate(produto.length, (index) {
-                    return new Card(
-                      child: new Container(
-                        child: Column(
-                          children: <Widget>[
-                            SizedBox(child: Image.asset(produto[index].Imagem), height: tamanho.height*0.1, width: tamanho.width,),
-                            Text(
-                              produto[index].Titulo,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: corPrimaria,
-                                fontSize: 18,
-                              ),
+                child: StreamBuilder(
+                  stream: Firestore.instance.collection('Produto').snapshots(),
+                  builder: (context, snapshot) {
+                    return GridView.count(
+                      crossAxisCount: 2,
+                      children: List.generate(produto.length, (index) {
+                        return new Card(
+                          child: new Container(
+                            child: Column(
+                              children: <Widget>[
+                                SizedBox(child: Image.asset(snapshot.data.documents[1]['imagemSrc']), height: tamanho.height*0.1, width: tamanho.width,),
+                                Text(
+                                  snapshot.data.documents[1]['titulo'],
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: corPrimaria,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                                Text(
+                                  snapshot.data.documents[1]['preço'],
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                    fontSize: 15,
+                                  ),
+                                ),
+                                Text(snapshot.data.documents[1]['vendedor']),
+                                Text(snapshot.data.documents[1]['categoria']),
+                              ],
                             ),
-                            Text(
-                              produto[index].Preco,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                                fontSize: 15,
-                              ),
-                            ),
-                            Text(produto[index].Vendedor),
-                            Text(produto[index].Complemento),
-                          ],
-                        ),
-                      ),
+                          ),
+                        );
+                      })
                     );
-                  })
+                  }
                 ),
               ),
               BotaoCurvo(
@@ -545,6 +550,16 @@ class _HomeCorpoState extends State<HomeCorpo> with SingleTickerProviderStateMix
       ),
     );
   }
+
+  // StreamBuilder BuscarProdutos(String titulo, preco, comp, vend, src) {
+  //   return StreamBuilder(
+  //     stream: Firestore.instance.collection('Produto').snapshots(),
+  //     builder: (context, snapshot) {
+  //       if (!snapshot.hasData) return Text('Carregando os dados... Porfavor aguarde');
+  //       return ;
+  //     },
+  //   );
+  // }
 
 
 }
