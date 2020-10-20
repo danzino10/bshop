@@ -18,7 +18,7 @@ class HomeCorpo extends StatefulWidget{
 
 class _HomeCorpoState extends State<HomeCorpo> with SingleTickerProviderStateMixin{
   final ServicoAuth _auth = ServicoAuth();
-  int i = 0;
+  int i = 1;
   PageController pageController;
   TabController tabController;
   List<String> img = [
@@ -451,14 +451,27 @@ class _HomeCorpoState extends State<HomeCorpo> with SingleTickerProviderStateMix
                   builder: (context, snapshot) {
                     return GridView.count(
                       crossAxisCount: 2,
-                      children: List.generate(produto.length, (index) {
+                      children: List.generate(i, (index) {
+                        for(int j=0; j<produto.length; j++){
+
+                        }
                         return new Card(
                           child: new Container(
                             child: Column(
                               children: <Widget>[
-                                SizedBox(child: Image.asset(snapshot.data.documents[1]['imagemSrc']), height: tamanho.height*0.1, width: tamanho.width,),
+                                //SizedBox(child: Image.asset(snapshot.data.documents[2]['imagemSrc']), height: tamanho.height*0.1, width: tamanho.width,),
+                                Expanded(
+                                    flex: 5,
+                                    child: Row(
+                                      children: <Widget>[
+                                        new Image.asset(
+                                          snapshot.data.documents[2]['imagemSrc'],
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ],
+                                    )),
                                 Text(
-                                  snapshot.data.documents[1]['titulo'],
+                                  snapshot.data.documents[2]['titulo'],
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: corPrimaria,
@@ -466,15 +479,15 @@ class _HomeCorpoState extends State<HomeCorpo> with SingleTickerProviderStateMix
                                   ),
                                 ),
                                 Text(
-                                  snapshot.data.documents[1]['preço'],
+                                  snapshot.data.documents[2]['preço'],
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black,
                                     fontSize: 15,
                                   ),
                                 ),
-                                Text(snapshot.data.documents[1]['vendedor']),
-                                Text(snapshot.data.documents[1]['categoria']),
+                                // Text(snapshot.data.documents[2]['vendedor']),
+                                // Text(snapshot.data.documents[1]['categoria']),
                               ],
                             ),
                           ),

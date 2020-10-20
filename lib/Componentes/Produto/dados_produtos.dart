@@ -1,7 +1,5 @@
 
 import 'package:bshop/Componentes/Produto/produto.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 
 var produto = [
   Produto(
