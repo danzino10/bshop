@@ -1,9 +1,8 @@
-import 'file:///W:/AndroidStudio/ECommerce/bshop/lib/Componentes/Barra_de_busca/barra_de_busca_home.dart';
 import 'package:bshop/Servicos/auth.dart';
 import 'package:bshop/Telas/Home/Componentes/home_corpo.dart';
 import 'package:bshop/constantes.dart';
 import 'package:flutter/material.dart';
-
+import 'package:geolocator/geolocator.dart';
 class Home extends StatefulWidget{
   @override
  _HomeState createState() => _HomeState();
@@ -11,7 +10,6 @@ class Home extends StatefulWidget{
 }
 
 class _HomeState extends State<Home> {
-
   final ServicoAuth _auth = ServicoAuth();
   final paginas = [
     HomeCorpo(),
@@ -20,10 +18,12 @@ class _HomeState extends State<Home> {
     Text("Carrinho"),
     Text("Mensagens"),
   ];
+
   int paginaEscolhida = 0;
   Icon iconeBusca = Icon(Icons.search);
-  Widget barraBusca = Text("BandaShop", style: TextStyle(color: corSecundaria, fontWeight: FontWeight.bold,));
-  String itemBusca;
+  //Widget local = Text(getLocation(), style: TextStyle(color: corSecundaria, fontWeight: FontWeight.bold,));
+  String _adress, itemBusca;
+  Position _position;
 
 
 
@@ -37,35 +37,37 @@ class _HomeState extends State<Home> {
           leading: IconButton(
             onPressed: (){},
             icon: Icon(
-              Icons.announcement,
+              Icons.location_on,
               color: corSecundaria,
             ),
-          ),
+        ),
           actions: <Widget>[
-            IconButton(
-              onPressed: (){
-                setState(() {
-                  if(this.iconeBusca.icon == Icons.search){
-                    this.iconeBusca = Icon(Icons.cancel);
-                    this.barraBusca = BarraDeBuscaHome(
-                      hint: "Procurar artigos",
-                      onChanged: (value){setState(() => itemBusca = value);},
-                    );
-                  }
-                  else{
-                    this.iconeBusca = Icon(Icons.search);
-                    this.barraBusca = Text("BandaShop", style: TextStyle(color: corSecundaria, fontWeight: FontWeight.bold,));
-                  }
-                });
-              },
-              icon: iconeBusca,
-              color: corSecundaria,
-            ),
+            // IconButton(
+            //   onPressed: (){
+            //     setState(() {
+            //       if(this.iconeBusca.icon == Icons.search){
+            //         this.iconeBusca = Icon(Icons.cancel);
+            //         this.barraBusca = BarraDeBuscaHome(
+            //           hint: "Procurar artigos",
+            //           onChanged: (value){setState(() => itemBusca = value);},
+            //         );
+            //       }
+            //       else{
+            //         this.iconeBusca = Icon(Icons.search);
+            //         this.barraBusca = Text("BandaShop", style: TextStyle(color: corSecundaria, fontWeight: FontWeight.bold,));
+            //       }
+            //     });
+            //   },
+            //   icon: iconeBusca,
+            //   color: corSecundaria,
+            // ),
           ],
           title: Column(
               children: <Widget>[
                 SizedBox(height: tamanho.height * 0.5,),
-                barraBusca,
+                if(localActual != null)
+                  //Text(getLocation(), style: TextStyle(color: corSecundaria, fontWeight: FontWeight.bold,)),
+                  _getCurrentLocation();
                 SizedBox(height: tamanho.height * 0.5,),
               ],
           ),
@@ -110,6 +112,6 @@ class _HomeState extends State<Home> {
 
     );
   }
-  
+
 }
 
